@@ -1,9 +1,5 @@
-from __future__ import annotations
+# src/igloosphinx/__init__.py
 
-import polars as pl
+from .inventory import Inventory
 
-__all__ = ("intersphinx_inv",)
-
-
-def intersphinx_inv():
-    return
+__all__ = ["Inventory"]
