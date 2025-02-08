@@ -1,7 +1,6 @@
 # tests/test_inventory.py
 
 import polars as pl
-import pytest
 
 from igloosphinx import Inventory
 

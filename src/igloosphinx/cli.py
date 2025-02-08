@@ -4,13 +4,18 @@ from __future__ import annotations
 
 import sys
 import click
-import polars as pl
 from .inventory import Inventory
+
 
 @click.command()
 @click.argument("package_name", type=str)
-@click.option("--format", "-f", "output_format", default="table",
-              help="Output format: table, csv, or json.")
+@click.option(
+    "--format",
+    "-f",
+    "output_format",
+    default="table",
+    help="Output format: table, csv, or json.",
+)
 def main(package_name: str, output_format: str) -> None:
     """
     Command-line interface for igloosphinx.

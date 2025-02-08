@@ -3,9 +3,9 @@
 from __future__ import annotations
 
 import subprocess
-import tempfile
 import requests
 import polars as pl
+
 
 class Inventory:
     """
@@ -13,7 +13,12 @@ class Inventory:
     into a Polars DataFrame, using PyPI metadata to discover the documentation URL.
     """
 
-    def __init__(self, package_name: str, version: str = "latest", lazy: bool = False) -> None:
+    def __init__(
+        self,
+        package_name: str,
+        version: str = "latest",
+        lazy: bool = False,
+    ) -> None:
         """
         Initialise the Inventory object.
 
@@ -44,7 +49,11 @@ class Inventory:
 
         return self._inventory_df
 
-    def review_version_changes(self, from_v: str = "first", to_v: str = "latest") -> pl.DataFrame:
+    def review_version_changes(
+        self,
+        from_v: str = "first",
+        to_v: str = "latest",
+    ) -> pl.DataFrame:
         """
         Compare documentation metadata across two versions.
         Currently a placeholder returning an empty DataFrame.
@@ -65,7 +74,7 @@ class Inventory:
                 ["pypi-docs-url", self.package_name],
                 capture_output=True,
                 text=True,
-                check=True
+                check=True,
             )
             # Extract URL from the output (this is purely illustrative)
             for line in completed_proc.stdout.splitlines():
@@ -94,7 +103,9 @@ class Inventory:
         project_urls = data["info"].get("project_urls", {})
         doc_url = project_urls.get("Documentation")
         if not doc_url:
-            raise ValueError(f"No documentation URL found in PyPI metadata for {self.package_name}")
+            raise ValueError(
+                f"No documentation URL found in PyPI metadata for {self.package_name}",
+            )
 
         # Hypothetically guess the objects.inv location
         # You might need advanced heuristics, or user guidance
@@ -120,14 +131,16 @@ class Inventory:
         """
         # In a real scenario, you'd parse the inventory structure here.
         # For demonstration, returning a trivial DataFrame:
-        df = pl.DataFrame({
-            "symbol_name": ["polars.Series.dtype", "polars.Series.flags"],
-            "symbol_type": ["py:attribute", "py:attribute"],
-            "reference_url": [
-                "reference/series/api/polars.Series.dtype.html#polars.Series.dtype",
-                "reference/series/api/polars.Series.flags.html#polars.Series.flags"
-            ]
-        })
+        df = pl.DataFrame(
+            {
+                "symbol_name": ["polars.Series.dtype", "polars.Series.flags"],
+                "symbol_type": ["py:attribute", "py:attribute"],
+                "reference_url": [
+                    "reference/series/api/polars.Series.dtype.html#polars.Series.dtype",
+                    "reference/series/api/polars.Series.flags.html#polars.Series.flags",
+                ],
+            },
+        )
 
         # If lazy is desired, one might do:
         if self.lazy:

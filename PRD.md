@@ -13,10 +13,10 @@
 ### Core Features (Must-Have)
 - Retrieve the `objects.inv` inventory URL using the `pypi-docs-url` tool or metadata.
 - Parse the retrieved `objects.inv` into a Polars DataFrame containing key fields:
-  - Symbol name  
-  - Symbol type (e.g., class, function, attribute)  
-  - Reference URL  
-  - Additional metadata extracted from the inventory  
+  - Symbol name
+  - Symbol type (e.g., class, function, attribute)
+  - Reference URL
+  - Additional metadata extracted from the inventory
 - Optionally retrieve full documentation for each symbol and append it to the DataFrame.
 - Provide both a CLI interface and a Python library interface for these operations.
 - Ensure idiomatic, efficient Polars usage (avoiding unnecessary Python loops or standard library workarounds).

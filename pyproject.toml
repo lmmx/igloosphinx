@@ -4,6 +4,12 @@ requires = [
   "pdm-backend"
 ]
 
+[dependency-groups]
+dev = [
+  "pdm>=2.22.3",
+  "pdm-bump>=0.9.10"
+]
+
 [project]
 name = "igloosphinx"
 version = "0.1.0"
@@ -14,7 +20,7 @@ authors = [
 ]
 requires-python = ">=3.9"
 dependencies = [
-    "requests>=2.32.3",
+  "requests>=2.32.3"
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -47,9 +53,3 @@ dev = [
 [project.urls]
 Homepage = "https://github.com/lmmx/igloosphinx"
 Repository = "https://github.com/lmmx/igloosphinx.git"
-
-[dependency-groups]
-dev = [
-    "pdm>=2.22.3",
-    "pdm-bump>=0.9.10",
-]
