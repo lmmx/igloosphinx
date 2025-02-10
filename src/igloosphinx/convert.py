@@ -24,7 +24,7 @@ def inventory_to_polars_df(inv: _Inventory, lazy: bool = False) -> pl.DataFrame:
                     "project_name": item.project_name,  # e.g. 'Polars'
                     "project_version": item.project_version,  # e.g. '' if not set
                     "uri": item.uri,  # doc reference, e.g. https://docs...
-                }
+                },
             )
 
     # Construct the DataFrame

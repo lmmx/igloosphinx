@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import subprocess
 
 import polars as pl
 import requests
@@ -48,7 +47,8 @@ class Inventory:
         raw_inv = self._download_inventory(objects_inv_url)
         # 3. Parse the inventory into a Polars DataFrame
         self._inventory_df = self._parse_inventory(
-            raw_data=raw_inv, uri=objects_inv_url
+            raw_data=raw_inv,
+            uri=objects_inv_url,
         )
         return self._inventory_df
 
