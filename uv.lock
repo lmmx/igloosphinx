@@ -263,7 +263,7 @@ wheels = [
 
 [[package]]
 name = "igloosphinx"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "click" },
@@ -296,7 +296,7 @@ requires-dist = [
     { name = "polars", marker = "extra == 'polars'", specifier = ">=1.21.0" },
     { name = "polars-lts-cpu", marker = "extra == 'polars-lts-cpu'", specifier = ">=1.21.0" },
     { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.1.0" },
-    { name = "pypi-docs-url", specifier = ">=0.1.1" },
+    { name = "pypi-docs-url", specifier = ">=0.1.4" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3.4" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "sphinx", git = "https://github.com/sphinx-doc/sphinx.git" },
@@ -618,16 +618,16 @@ wheels = [
 
 [[package]]
 name = "pypi-docs-url"
-version = "0.1.1"
+version = "0.1.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
     { name = "pyyaml" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/21/11/da2c8bcdfb958c58516a8f83b2b0ea20f41f61a3a4b2bc2b923cdedf58d4/pypi_docs_url-0.1.1.tar.gz", hash = "sha256:ba901cfa8682266b1c3de02881e0c8162923bd062a8f8c294d951db04ca899eb", size = 6081 }
+sdist = { url = "https://files.pythonhosted.org/packages/2b/19/45e6f6b36b731c17395f1df03f410bdbd3d64740c75a41ab6f8bd01cd84c/pypi_docs_url-0.1.4.tar.gz", hash = "sha256:4a2605d5dbd7a2ba465dd09161e94fc12e5cb602abc5ae99da9d72a79a5c5951", size = 10543 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9c/03/30ed5953d554e19497488b3561bea90682a6820e10b4efbee8851ff1ba4c/pypi_docs_url-0.1.1-py3-none-any.whl", hash = "sha256:aa61af3a7018e542c0c39adeb987dd9c180dc96697f2fa0e334a31f11c6810fc", size = 6907 },
+    { url = "https://files.pythonhosted.org/packages/ea/e4/5226f7d78f80b67a26d1159d86af9d22dbcc3f4945173d8a538f7eda779c/pypi_docs_url-0.1.4-py3-none-any.whl", hash = "sha256:94c9d70dbe74ff277e530e163ad9ca2e7521fb1e329a76f17c32aca2a491e02d", size = 9823 },
 ]
 
 [[package]]
