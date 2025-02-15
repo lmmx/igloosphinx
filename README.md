@@ -26,18 +26,6 @@ On older CPUs run:
 pip install igloosphinx[polars-lts-cpu]
 ```
 
-**NOTE** Temporarily requires dev-branch Sphinx, either use
-
-```sh
-pip install git+https://github.com/sphinx-doc/sphinx.git
-```
-
-or
-
-```sh
-uv add git+https://github.com/sphinx-doc/sphinx.git
-```
-
 ## Usage
 
 ```python
