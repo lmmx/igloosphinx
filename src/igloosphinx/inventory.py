@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import polars as pl
-import requests
 import sphobjinv
 from pypi_docs_url import get_intersphinx_url
 

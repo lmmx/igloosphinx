@@ -3,7 +3,8 @@ import sphobjinv
 
 
 def inventory_to_polars_df(
-    inv: sphobjinv.Inventory, lazy: bool = False
+    inv: sphobjinv.Inventory,
+    lazy: bool = False,
 ) -> pl.DataFrame:
     """
     Convert a sphobjinv.Inventory instance into a Polars DataFrame
@@ -25,7 +26,7 @@ def inventory_to_polars_df(
                 "project_name": inv.project,  # From sphobjinv.Inventory
                 "project_version": inv.version,  # From sphobjinv.Inventory
                 "uri": item.uri,  # Link reference, e.g. https://docs...
-            }
+            },
         )
 
     df = pl.DataFrame(records)
