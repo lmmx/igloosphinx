@@ -12,7 +12,7 @@ dev = [
 
 [project]
 name = "igloosphinx"
-version = "0.1.1"
+version = "0.1.2"
 description = "Accessing Intersphinx inventories for Python packages using PyPI metadata to locate documentation sites"
 readme = "README.md"
 authors = [
