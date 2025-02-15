@@ -23,7 +23,7 @@ dependencies = [
   "click>=8.1.8",
   "pypi-docs-url>=0.1.4",
   "requests>=2.32.3",
-  "sphinx>=7.4.7"
+  "sphobjinv>=2.3.1.2",
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -59,6 +59,3 @@ igloosphinx = "igloosphinx.cli:main"
 [project.urls]
 Homepage = "https://github.com/lmmx/igloosphinx"
 Repository = "https://github.com/lmmx/igloosphinx.git"
-
-[tool.uv.sources]
-sphinx = {git = "https://github.com/sphinx-doc/sphinx.git"}
