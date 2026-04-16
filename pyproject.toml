@@ -1,13 +1,9 @@
 [build-system]
-build-backend = "pdm.backend"
-requires = [
-  "pdm-backend"
-]
+build-backend = "uv_build"
+requires = ["uv_build>=0.11.6,<0.12"]
 
 [dependency-groups]
 dev = [
-  "pdm>=2.22.3",
-  "pdm-bump>=0.9.10"
 ]
 
 [project]
@@ -20,10 +16,10 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-  "click>=8.1.8",
-  "pypi-docs-url>=0.1.4",
-  "requests>=2.32.3",
-  "sphobjinv>=2.3.1.2"
+  "click>=8.3",
+  "pypi-docs-url>=0.1.5",
+  "requests>=2.33",
+  "sphobjinv>=2.4"
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
