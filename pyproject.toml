@@ -4,6 +4,10 @@ requires = ["uv_build>=0.11.6,<0.12"]
 
 [dependency-groups]
 dev = [
+    "pdbpp>=0.12.1",
+]
+test = [
+    "pytest>=8.3.4",
 ]
 
 [project]
@@ -17,9 +21,10 @@ authors = [
 requires-python = ">=3.11"
 dependencies = [
   "click>=8.3",
+  "polars>=1.30.0",
   "pypi-docs-url>=0.1.5",
   "requests>=2.33",
-  "sphobjinv>=2.4"
+  "sphobjinv>=2.4",
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -38,18 +43,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-polars = [
-  "polars>=1.21.0"
-]
-polars-lts-cpu = [
-  "polars-lts-cpu>=1.21.0"
-]
-dev = [
-  "pdm>=2.22.3",
-  "pdm-bump>=0.9.10",
-  "pre-commit>=4.1.0",
-  "pytest>=8.3.4"
-]
+lts-cpu = ["polars[rtcompat]>=1.30"]
 
 [project.scripts]
 igloosphinx = "igloosphinx.cli:main"
@@ -57,3 +51,6 @@ igloosphinx = "igloosphinx.cli:main"
 [project.urls]
 Homepage = "https://github.com/lmmx/igloosphinx"
 Repository = "https://github.com/lmmx/igloosphinx.git"
+
+[tool.uv]
+default-groups = "all"
