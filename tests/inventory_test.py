@@ -24,13 +24,14 @@ def test_inventory_fetch(monkeypatch):
                 "symbol_name": ["foo"],
                 "symbol_type": ["function"],
                 "reference_url": ["https://example.com"],
-            }
+            },
         )
 
     monkeypatch.setattr(Inventory, "_discover_objects_inv", mock_discover_objects_inv)
     monkeypatch.setattr("igloosphinx.inventory.sphobjinv.Inventory", MockSphInventory)
     monkeypatch.setattr(
-        "igloosphinx.inventory.inventory_to_polars_df", mock_inventory_to_df
+        "igloosphinx.inventory.inventory_to_polars_df",
+        mock_inventory_to_df,
     )
 
     inv = Inventory("example-package")
