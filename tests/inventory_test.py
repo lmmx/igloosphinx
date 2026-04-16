@@ -14,11 +14,25 @@ def test_inventory_fetch(monkeypatch):
     def mock_discover_objects_inv(_self):
         return "mock://test-objects.inv"
 
-    def mock_download_inventory(_self, url: str):
-        return b"FAKE_INVENTORY_CONTENTS"
+    class MockSphInventory:
+        def __init__(self, url):
+            self.url = url
+
+    def mock_inventory_to_df(_inv, lazy=False):
+        return pl.DataFrame(
+            {
+                "symbol_name": ["foo"],
+                "symbol_type": ["function"],
+                "reference_url": ["https://example.com"],
+            },
+        )
 
     monkeypatch.setattr(Inventory, "_discover_objects_inv", mock_discover_objects_inv)
-    monkeypatch.setattr(Inventory, "_download_inventory", mock_download_inventory)
+    monkeypatch.setattr("igloosphinx.inventory.sphobjinv.Inventory", MockSphInventory)
+    monkeypatch.setattr(
+        "igloosphinx.inventory.inventory_to_polars_df",
+        mock_inventory_to_df,
+    )
 
     inv = Inventory("example-package")
     df = inv.fetch_inventory()

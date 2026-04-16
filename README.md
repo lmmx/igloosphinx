@@ -1,5 +1,12 @@
 # igloosphinx
 
+<!-- [![downloads](https://static.pepy.tech/badge/igloosphinx/month)](https://pepy.tech/project/igloosphinx) -->
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+[![PyPI](https://img.shields.io/pypi/v/igloosphinx.svg)](https://pypi.org/project/igloosphinx)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/igloosphinx.svg)](https://pypi.org/project/igloosphinx)
+[![License](https://img.shields.io/pypi/l/igloosphinx.svg)](https://pypi.python.org/pypi/igloosphinx)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/lmmx/igloosphinx/master.svg)](https://results.pre-commit.ci/latest/github/lmmx/igloosphinx/master)
+
 **Accessing Intersphinx inventories for Python packages using PyPI metadata to locate documentation sites.**
 
 `igloosphinx` provides a command-line interface and library access to Intersphinx inventories, enabling users to easily find and retrieve documentation for Python packages. The tool works by:
